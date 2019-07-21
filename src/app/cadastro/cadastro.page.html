@@ -1,11 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-title>Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    Apenas uma tela de cadastro.
+
+    <h1 class="ion-text-center">Cadastro de Treinador</h1>
+
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)"> 
+
+      <ion-list>
+        <ion-item class="invalid">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item class="invalid">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="invalid">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-list class="ion-margin-top">
+          <ion-radio-group formControlName="starterPokemon">
+            <ion-list-header class="invalid">
+              <ion-label>Pokemon Inicial</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Bulbasaur</ion-label>
+              <ion-radio slot="start" value="bulbasaur"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Charmander</ion-label>
+              <ion-radio slot="start" value="charmander"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Squirtle</ion-label>
+              <ion-radio slot="start" value="squirtle"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        
+        </ion-list>
+
+      <ion-row class="ion-justify-content-center">
+          <ion-button type="submit" color="danger" shape="round">Cadastrar</ion-button>
+      </ion-row>
+      
+    </form>
+
   </div>
 </ion-content>
