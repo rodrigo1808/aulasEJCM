@@ -16,6 +16,7 @@ export class CadastroPage implements OnInit {
       name: [null, [Validators.required, Validators.minLength(3)]],
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required, Validators.minLength(6)]],
+      phone: [null, [Validators.required]],
       starterPokemon: [null, [Validators.required]]
     });
 
