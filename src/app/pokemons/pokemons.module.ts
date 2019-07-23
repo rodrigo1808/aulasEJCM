@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PokemonsPage } from './pokemons.page';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
-  declarations: [PokemonsPage]
+  declarations: [PokemonsPage, PokemonCardComponent]
 })
 export class PokemonsPageModule {}
