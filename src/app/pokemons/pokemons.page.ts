@@ -46,5 +46,9 @@ export class PokemonsPage implements OnInit {
     );
   }
 
+  goToPokemonProfile(id) {
+    console.log('Ir para o perfil do pokemon de id', id);
+  }
+
 
 }

@@ -13,8 +13,8 @@
       Catch
     </ion-button>
 
-    <ion-list *ngFor="let pokemon of pokemons">
-      <app-pokemon-card></app-pokemon-card>
+    <ion-list class="ion-padding-top">
+      <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemonInfo]="pokemon" (pokemonClicked)="goToPokemonProfile($event)"></app-pokemon-card>
     </ion-list>
 
   </div>
